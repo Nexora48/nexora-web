@@ -3,7 +3,6 @@ import About from "@/components/sections/About";
 import ProductsSection from "@/components/sections/ProductsSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import WhyNexora from "@/components/sections/WhyNexora";
-import TechnologiesSection from "@/components/sections/TechnologiesSection";
 import IndustriesSection from "@/components/sections/IndustriesSection";
 import ProcessSection from "@/components/sections/ProcessSection";
 import LeadershipSection from "@/components/sections/LeadershipSection";
@@ -19,7 +18,6 @@ export default function Home() {
       <ProductsSection />
       <FeaturesSection />
       <WhyNexora />
-      <TechnologiesSection />
       <IndustriesSection />
       <ProcessSection />
       <LeadershipSection />
