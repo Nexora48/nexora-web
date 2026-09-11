@@ -7,7 +7,7 @@ export const footerColumns: FooterColumn[] = [
       { label: "Home", href: "/" },
       { label: "About", href: "/about" },
       { label: "Products", href: "/products" },
-      { label: "Capabilities", href: "/capabilities" },
+      { label: "Features", href: "/features" },
       { label: "Leadership", href: "/leadership" },
       { label: "Contact", href: "/contact" },
     ],

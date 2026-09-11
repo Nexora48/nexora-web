@@ -1,7 +1,7 @@
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import ProductsSection from "@/components/sections/ProductsSection";
-import CapabilitiesSection from "@/components/sections/CapabilitiesSection";
+import FeaturesSection from "@/components/sections/FeaturesSection";
 import WhyNexora from "@/components/sections/WhyNexora";
 import TechnologiesSection from "@/components/sections/TechnologiesSection";
 import IndustriesSection from "@/components/sections/IndustriesSection";
@@ -17,7 +17,7 @@ export default function Home() {
       <Hero />
       <About />
       <ProductsSection />
-      <CapabilitiesSection />
+      <FeaturesSection />
       <WhyNexora />
       <TechnologiesSection />
       <IndustriesSection />

@@ -15,9 +15,9 @@ export const pageSeo = {
     title: "Products | Nexora Pvt",
     description: "Explore Nexora Admin, Nexora Living and Nexora Gate — Nexora Pvt's product suite for residential communities.",
   },
-  capabilities: {
-    title: "Capabilities | Nexora Pvt",
-    description: "The engineering disciplines behind Nexora Admin, Living and Gate.",
+  features: {
+    title: "Features | Nexora Pvt",
+    description: "Visitor approvals, amenity booking, payments, complaints, parking tracking and more — everything Nexora Admin, Living and Gate cover.",
   },
   leadership: {
     title: "Leadership | Nexora Pvt",
