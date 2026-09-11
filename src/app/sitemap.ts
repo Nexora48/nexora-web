@@ -1,0 +1,44 @@
+import type { MetadataRoute } from "next";
+import { siteSeo } from "@/content/seo";
+import { products } from "@/content/products";
+import { projects } from "@/content/projects";
+
+const staticRoutes = [
+  "",
+  "/about",
+  "/products",
+  "/services",
+  "/projects",
+  "/leadership",
+  "/contact",
+  "/privacy-policy",
+  "/terms",
+];
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const base = siteSeo.siteUrl.replace(/\/$/, "");
+  const now = new Date();
+
+  const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
+    url: `${base}${route}`,
+    lastModified: now,
+    changeFrequency: route === "" ? "weekly" : "monthly",
+    priority: route === "" ? 1 : 0.7,
+  }));
+
+  const productEntries: MetadataRoute.Sitemap = products.map((product) => ({
+    url: `${base}/products/${product.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  const projectEntries: MetadataRoute.Sitemap = projects.map((project) => ({
+    url: `${base}/projects/${project.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  return [...staticEntries, ...productEntries, ...projectEntries];
+}
