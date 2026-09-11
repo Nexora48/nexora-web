@@ -38,7 +38,7 @@ export const products: Product[] = [
     slug: "nexora-living",
     name: "Nexora Living",
     category: "Resident App",
-    icon: "Home",
+    icon: "House",
     description:
       "The resident app that keeps every household connected to their community — notices, amenities, payments and requests in one place.",
     longDescription:
