@@ -1,5 +1,6 @@
-import { Boxes, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import Icon from "@/components/Icon";
 import type { Product } from "@/content/products";
 
 export default function ProductCard({ product, delay = 0 }: { product: Product; delay?: number }) {
@@ -10,7 +11,8 @@ export default function ProductCard({ product, delay = 0 }: { product: Product; 
         className="flex h-full flex-col overflow-hidden rounded-card border border-border bg-surface shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-lifted"
       >
         <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-gradient-to-br from-brand/15 via-surface-alt to-accent/15">
-          <Boxes
+          <Icon
+            name={product.icon}
             className="h-14 w-14 text-brand/50 transition-transform duration-500 group-hover:scale-110"
             aria-hidden="true"
           />

@@ -19,9 +19,9 @@ export default function ProductsSection({
         ) : null}
         <p className="mx-auto mt-4 max-w-2xl text-center text-muted">{productsIntro.body}</p>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product, i) => (
-            <ProductCard key={product.slug} product={product} delay={i * 0.06} />
+            <ProductCard key={product.slug} product={product} delay={i * 0.08} />
           ))}
         </div>
 

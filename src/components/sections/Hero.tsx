@@ -5,12 +5,13 @@ import Container from "@/components/Container";
 import Button from "@/components/Button";
 import Icon from "@/components/Icon";
 import { hero } from "@/content/hero";
+import { company } from "@/content/company";
 
 const floatingCards = [
-  { icon: "LayoutDashboard", label: "Product Dashboard", className: "left-[4%] top-[18%] lg:left-[8%]" },
-  { icon: "Sparkles", label: "AI Automation", className: "right-[2%] top-[8%] lg:right-[6%]" },
-  { icon: "GitBranch", label: "Scalable Architecture", className: "left-[10%] bottom-[10%] lg:left-[14%]" },
-  { icon: "ShieldCheck", label: "Secure by Design", className: "right-[4%] bottom-[16%] lg:right-[10%]" },
+  { icon: "LayoutDashboard", label: "Nexora Admin", className: "left-[4%] top-[18%] lg:left-[8%]" },
+  { icon: "Home", label: "Nexora Living", className: "right-[2%] top-[8%] lg:right-[6%]" },
+  { icon: "ShieldCheck", label: "Nexora Gate", className: "left-[10%] bottom-[10%] lg:left-[14%]" },
+  { icon: "Users", label: "Built for Communities", className: "right-[4%] bottom-[16%] lg:right-[10%]" },
 ];
 
 export default function Hero() {
@@ -58,7 +59,7 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium tracking-wide text-white/70"
         >
-          Product &amp; Service Based Technology Company
+          {company.type}
         </motion.span>
 
         <motion.h1

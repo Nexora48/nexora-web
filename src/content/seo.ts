@@ -1,7 +1,7 @@
 export const siteSeo = {
-  title: "Nexora Pvt | Technology, Products & Digital Solutions",
+  title: "Nexora Pvt | Admin, Living & Gate for Residential Communities",
   description:
-    "Nexora Pvt is a product and service-based technology company building innovative digital products and scalable technology solutions for businesses.",
+    "Nexora Pvt builds Nexora Admin, Nexora Living and Nexora Gate — a connected platform for managing and living in residential communities.",
   siteUrl: "https://www.nexorapvt.com", // PLACEHOLDER — replace with real production domain
 };
 
@@ -9,19 +9,15 @@ export const pageSeo = {
   about: {
     title: "About Us | Nexora Pvt",
     description:
-      "Learn about Nexora Pvt — a product and service-based technology company combining product thinking, engineering and design.",
+      "Learn about Nexora Pvt — a residential community technology company building Nexora Admin, Living and Gate.",
   },
   products: {
     title: "Products | Nexora Pvt",
-    description: "Explore the digital products Nexora Pvt builds and maintains.",
+    description: "Explore Nexora Admin, Nexora Living and Nexora Gate — Nexora Pvt's product suite for residential communities.",
   },
-  services: {
-    title: "Services | Nexora Pvt",
-    description: "Software development, mobile, web, UI/UX, AI and more — explore Nexora Pvt's technology services.",
-  },
-  projects: {
-    title: "Projects | Nexora Pvt",
-    description: "A showcase of digital products and platforms designed and engineered by Nexora Pvt.",
+  capabilities: {
+    title: "Capabilities | Nexora Pvt",
+    description: "The engineering disciplines behind Nexora Admin, Living and Gate.",
   },
   leadership: {
     title: "Leadership | Nexora Pvt",
@@ -29,7 +25,7 @@ export const pageSeo = {
   },
   contact: {
     title: "Contact | Nexora Pvt",
-    description: "Get in touch with Nexora Pvt to start your next product or technology project.",
+    description: "Get in touch with Nexora Pvt to bring Nexora Admin, Living and Gate to your community.",
   },
   privacy: {
     title: "Privacy Policy | Nexora Pvt",

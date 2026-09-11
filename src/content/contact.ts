@@ -17,12 +17,11 @@ export const contactDetails = {
 };
 
 export const projectTypes = [
-  "Product Development",
-  "Web Application",
-  "Mobile Application",
-  "UI/UX Design",
-  "AI & Automation",
-  "Other",
+  "Nexora Admin",
+  "Nexora Living",
+  "Nexora Gate",
+  "Full Suite (Admin + Living + Gate)",
+  "Partnership / Other",
 ];
 
 export const budgetRanges = [

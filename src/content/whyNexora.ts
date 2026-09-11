@@ -25,12 +25,12 @@ export const whyNexoraReasons: Reason[] = [
   },
   {
     icon: "SlidersHorizontal",
-    title: "Flexible Engagement",
-    description: "Support startups, businesses and organizations with different technology needs.",
+    title: "Built for Every Community",
+    description: "Nexora Admin, Living and Gate adapt to communities of every size — from small apartment complexes to large gated townships.",
   },
   {
     icon: "Handshake",
     title: "Long-Term Partnership",
-    description: "Our goal is to build lasting relationships, not simply complete projects.",
+    description: "Our goal is to build lasting relationships with the communities we serve, not simply ship software.",
   },
 ];

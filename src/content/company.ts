@@ -2,10 +2,10 @@
 export const company = {
   name: "Nexora Pvt",
   shortName: "Nexora",
-  type: "Product & Service Based Technology Company",
+  type: "Residential Community Technology Company",
   tagline: "Building Technology. Creating Possibilities.",
   description:
-    "Nexora Pvt is a technology company focused on creating meaningful digital products and delivering high-quality technology services. We combine product thinking, engineering expertise, design, and business understanding to transform ideas into scalable digital experiences.",
+    "Nexora Pvt is a residential community technology company. We build Nexora Admin, Nexora Living and Nexora Gate — a connected product suite that helps communities manage daily operations, keeps residents connected, and keeps gates and visitors secure.",
   vision:
     "To build technology that creates meaningful experiences, solves real problems and shapes a better digital future.",
   mission:

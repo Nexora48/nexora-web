@@ -155,7 +155,7 @@ export default function ContactForm() {
           />
         </Field>
 
-        <Field label="Project Type" htmlFor="projectType">
+        <Field label="Interested In" htmlFor="projectType">
           <select
             id="projectType"
             name="projectType"
@@ -163,7 +163,7 @@ export default function ContactForm() {
             onChange={(e) => updateField("projectType", e.target.value)}
             className={inputClass(false)}
           >
-            <option value="">Select a project type</option>
+            <option value="">Select a product</option>
             {projectTypes.map((type) => (
               <option key={type} value={type}>
                 {type}

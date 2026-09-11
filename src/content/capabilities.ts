@@ -1,45 +1,48 @@
-export type Service = {
+// The engineering disciplines behind Nexora Admin, Living and Gate.
+// This is NOT a list of services offered for hire — Nexora is a product
+// company, not a client services business.
+export type Capability = {
   slug: string;
   icon: string; // lucide-react icon name
   title: string;
   description: string;
 };
 
-export const servicesIntro = {
-  heading: "Our Services",
-  subheading: "Technology expertise that turns ideas into impact.",
+export const capabilitiesIntro = {
+  heading: "How We Build It",
+  subheading: "The engineering disciplines behind Admin, Living and Gate.",
 };
 
-export const services: Service[] = [
+export const capabilities: Capability[] = [
   {
     slug: "software-development",
     icon: "CodeXml",
     title: "Software Development",
-    description: "Custom web, mobile and enterprise software solutions.",
+    description: "Custom web, mobile and backend engineering across the whole product suite.",
   },
   {
     slug: "mobile-app-development",
     icon: "Smartphone",
     title: "Mobile App Development",
-    description: "Modern mobile applications for iOS and Android.",
+    description: "Native-feeling mobile experiences for residents, guards and administrators.",
   },
   {
     slug: "web-development",
     icon: "Globe",
     title: "Web Development",
-    description: "High-performance, responsive and scalable websites and web applications.",
+    description: "High-performance, responsive dashboards and web experiences.",
   },
   {
     slug: "ui-ux-design",
     icon: "PenTool",
     title: "UI/UX Design",
-    description: "Beautiful, intuitive and user-focused digital experiences.",
+    description: "Beautiful, intuitive experiences for residents, staff and security teams.",
   },
   {
     slug: "backend-development",
     icon: "Server",
     title: "Backend Development",
-    description: "Secure, scalable and reliable backend systems and APIs.",
+    description: "Secure, scalable and reliable backend systems and APIs powering the suite.",
   },
   {
     slug: "cloud-devops",
@@ -51,19 +54,19 @@ export const services: Service[] = [
     slug: "ai-automation",
     icon: "Sparkles",
     title: "AI & Automation",
-    description: "AI-powered solutions, intelligent automation and smart digital experiences.",
+    description: "Automation that reduces manual work for residents and administrators alike.",
   },
   {
     slug: "api-system-integration",
     icon: "Plug",
     title: "API & System Integration",
-    description: "Connecting applications, services and business systems.",
+    description: "Keeping Admin, Living and Gate connected as one platform.",
   },
   {
     slug: "product-development",
     icon: "Rocket",
     title: "Product Development",
-    description: "Taking products from idea and MVP to scalable production platforms.",
+    description: "Taking the product suite from idea and MVP to scalable production platforms.",
   },
   {
     slug: "maintenance-support",

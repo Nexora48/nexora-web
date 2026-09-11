@@ -1,14 +1,12 @@
 import type { MetadataRoute } from "next";
 import { siteSeo } from "@/content/seo";
 import { products } from "@/content/products";
-import { projects } from "@/content/projects";
 
 const staticRoutes = [
   "",
   "/about",
   "/products",
-  "/services",
-  "/projects",
+  "/capabilities",
   "/leadership",
   "/contact",
   "/privacy-policy",
@@ -30,15 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${base}/products/${product.slug}`,
     lastModified: now,
     changeFrequency: "monthly",
-    priority: 0.6,
+    priority: 0.8,
   }));
 
-  const projectEntries: MetadataRoute.Sitemap = projects.map((project) => ({
-    url: `${base}/projects/${project.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.6,
-  }));
-
-  return [...staticEntries, ...productEntries, ...projectEntries];
+  return [...staticEntries, ...productEntries];
 }
