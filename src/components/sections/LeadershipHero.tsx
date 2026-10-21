@@ -5,7 +5,7 @@ import { localImage } from "@/lib/images";
 import { leadershipIntro, leaders } from "@/content/leadership";
 
 export default function LeadershipHero() {
-  const photo = localImage("community");
+  const photo = localImage("team-workspace") ?? localImage("community");
 
   return (
     <section className="relative overflow-hidden bg-ink py-24 text-white sm:py-32">

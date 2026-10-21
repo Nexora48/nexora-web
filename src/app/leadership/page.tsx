@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import LeadershipHero from "@/components/sections/LeadershipHero";
 import LeadershipTeam from "@/components/sections/LeadershipTeam";
+import LeadershipValues from "@/components/sections/LeadershipValues";
 import VisionMission from "@/components/sections/VisionMission";
 import ClientCta from "@/components/sections/ClientCta";
 import { pageSeo } from "@/content/seo";
@@ -15,6 +16,7 @@ export default function LeadershipPage() {
     <>
       <LeadershipHero />
       <LeadershipTeam />
+      <LeadershipValues />
       <VisionMission />
       <ClientCta />
     </>
