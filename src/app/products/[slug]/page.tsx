@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
+import { localImage } from "@/lib/images";
 import { CheckCircle2 } from "lucide-react";
 import Container from "@/components/Container";
 import PageHeader from "@/components/PageHeader";
@@ -30,6 +32,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const { slug } = await params;
   const product = products.find((p) => p.slug === slug);
   if (!product) notFound();
+  const photo = localImage(product.slug);
 
   return (
     <>
@@ -37,6 +40,19 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
       <section className="py-16 sm:py-24">
         <Container>
+          {photo ? (
+            <Reveal className="relative mb-12 aspect-[21/9] overflow-hidden rounded-card border border-border shadow-soft">
+              <Image
+                src={photo}
+                alt={`${product.name} — ${product.category}`}
+                fill
+                priority
+                quality={80}
+                sizes="(min-width: 1280px) 1200px, 100vw"
+                className="object-cover"
+              />
+            </Reveal>
+          ) : null}
           <div className="grid gap-12 lg:grid-cols-3">
             <Reveal className="lg:col-span-2">
               <h2 className="font-display text-2xl font-semibold">Overview</h2>

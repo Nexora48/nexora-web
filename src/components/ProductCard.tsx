@@ -1,9 +1,13 @@
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import { localImage } from "@/lib/images";
 import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
 import type { Product } from "@/content/products";
 
 export default function ProductCard({ product, delay = 0 }: { product: Product; delay?: number }) {
+  const photo = localImage(product.slug);
+
   return (
     <Reveal delay={delay} className="group h-full">
       <a
@@ -11,11 +15,25 @@ export default function ProductCard({ product, delay = 0 }: { product: Product; 
         className="flex h-full flex-col overflow-hidden rounded-card border border-border bg-surface shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-lifted"
       >
         <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-gradient-to-br from-brand/15 via-surface-alt to-brand-light/15">
-          <Icon
-            name={product.icon}
-            className="h-14 w-14 text-brand/50 transition-transform duration-500 group-hover:scale-110"
-            aria-hidden="true"
-          />
+          {photo ? (
+            <>
+              <Image
+                src={photo}
+                alt={`${product.name} — ${product.category}`}
+                fill
+                quality={80}
+                sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/40 to-transparent" aria-hidden="true" />
+            </>
+          ) : (
+            <Icon
+              name={product.icon}
+              className="h-14 w-14 text-brand/50 transition-transform duration-500 group-hover:scale-110"
+              aria-hidden="true"
+            />
+          )}
           <span className="absolute left-4 top-4 rounded-full bg-background/80 px-3 py-1 text-[11px] font-medium text-muted backdrop-blur">
             {product.category}
           </span>

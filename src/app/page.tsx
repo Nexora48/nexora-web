@@ -1,3 +1,4 @@
+import { localImage } from "@/lib/images";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import ProductsSection from "@/components/sections/ProductsSection";
@@ -13,7 +14,7 @@ import ContactSection from "@/components/sections/ContactSection";
 export default function Home() {
   return (
     <>
-      <Hero />
+      <Hero backgroundSrc={localImage("hero")} />
       <About />
       <ProductsSection />
       <FeaturesSection />

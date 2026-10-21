@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import Container from "@/components/Container";
 import Button from "@/components/Button";
@@ -14,12 +15,26 @@ const floatingCards = [
   { icon: "Users", label: "Built for Communities", className: "right-[4%] bottom-[16%] lg:right-[10%]" },
 ];
 
-export default function Hero() {
+export default function Hero({ backgroundSrc = null }: { backgroundSrc?: string | null }) {
   const shouldReduceMotion = useReducedMotion();
 
   return (
     <section className="relative overflow-hidden bg-ink text-white">
       {/* Background layers */}
+      {backgroundSrc ? (
+        <>
+          <Image
+            src={backgroundSrc}
+            alt=""
+            fill
+            priority
+            quality={80}
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/70 to-ink/95" aria-hidden="true" />
+        </>
+      ) : null}
       <div className="pointer-events-none absolute inset-0">
         <div
           className="absolute inset-0 opacity-[0.07]"
