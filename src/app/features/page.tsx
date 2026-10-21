@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import PageHeader from "@/components/PageHeader";
-import FeaturesSection from "@/components/sections/FeaturesSection";
+import FeaturesHero from "@/components/sections/FeaturesHero";
+import FeaturesExplorer from "@/components/sections/FeaturesExplorer";
 import ClientCta from "@/components/sections/ClientCta";
 import { pageSeo } from "@/content/seo";
-import { featuresIntro } from "@/content/features";
 
 export const metadata: Metadata = {
   title: pageSeo.features.title,
@@ -13,8 +12,8 @@ export const metadata: Metadata = {
 export default function FeaturesPage() {
   return (
     <>
-      <PageHeader eyebrow="Features" heading={featuresIntro.heading} subheading={featuresIntro.subheading} />
-      <FeaturesSection showHeading={false} />
+      <FeaturesHero />
+      <FeaturesExplorer />
       <ClientCta />
     </>
   );
