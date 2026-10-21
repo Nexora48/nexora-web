@@ -55,4 +55,41 @@ export const aboutPage = {
     heading: "One platform, three products",
     subheading: "Each app serves a different part of community life — and they work together as one.",
   },
+  timeline: {
+    eyebrow: "How It Works",
+    heading: "A day in the life of a Nexora community",
+    subheading: "From the gate to the committee room, the three products work as one flow.",
+    steps: [
+      {
+        icon: "ShieldCheck",
+        product: "Nexora Gate",
+        title: "A visitor arrives at the gate",
+        description: "The guard logs the visitor, delivery or cab in the Gate app and requests approval.",
+      },
+      {
+        icon: "House",
+        product: "Nexora Living",
+        title: "The resident approves instantly",
+        description: "The household gets the request on their phone and approves or declines in a tap.",
+      },
+      {
+        icon: "ShieldCheck",
+        product: "Nexora Gate",
+        title: "Entry is recorded",
+        description: "Once approved, the guard lets them in and the entry and exit are logged automatically.",
+      },
+      {
+        icon: "Bell",
+        product: "Nexora Living",
+        title: "Residents stay in the loop",
+        description: "Notices, amenity bookings, payments and service requests all happen in the same app.",
+      },
+      {
+        icon: "LayoutDashboard",
+        product: "Nexora Admin",
+        title: "The committee stays in control",
+        description: "Administrators see records, dues, approvals and reports from a single dashboard.",
+      },
+    ],
+  },
 };
