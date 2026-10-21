@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import PageHeader from "@/components/PageHeader";
-import About from "@/components/sections/About";
+import AboutHero from "@/components/sections/AboutHero";
+import AboutStory from "@/components/sections/AboutStory";
+import AboutSuite from "@/components/sections/AboutSuite";
 import WhyNexora from "@/components/sections/WhyNexora";
 import VisionMission from "@/components/sections/VisionMission";
+import LeadershipSection from "@/components/sections/LeadershipSection";
 import ClientCta from "@/components/sections/ClientCta";
 import { pageSeo } from "@/content/seo";
 
@@ -14,14 +16,12 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <PageHeader
-        eyebrow="About Nexora"
-        heading="A technology company built on product thinking."
-        subheading="Nexora Pvt combines engineering, design and business understanding to build meaningful digital products and services."
-      />
-      <About />
+      <AboutHero />
+      <AboutStory />
+      <AboutSuite />
       <WhyNexora />
       <VisionMission />
+      <LeadershipSection />
       <ClientCta />
     </>
   );

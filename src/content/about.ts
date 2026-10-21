@@ -26,3 +26,33 @@ export const about = {
     },
   ] as Stat[],
 };
+
+// Content for the dedicated /about page.
+export const aboutPage = {
+  hero: {
+    eyebrow: "About Nexora",
+    heading: "Technology that makes community living simpler.",
+    subheading:
+      "Nexora Pvt is a residential community technology company. We build the products that help communities run smoothly and keep residents connected.",
+    chips: ["Residential communities", "Admin · Living · Gate", "Committees, residents & security"],
+  },
+  story: {
+    eyebrow: "Our Story",
+    heading: "Built around how communities actually work",
+    paragraphs: [
+      "Nexora Pvt builds Nexora Admin, Nexora Living and Nexora Gate — a connected product suite that helps communities manage daily operations, keeps residents connected, and keeps gates and visitors secure.",
+      "We combine product thinking, engineering expertise, design and business understanding to turn everyday community needs — gate approvals, amenity bookings, payments, complaints — into simple, reliable digital experiences.",
+    ],
+    points: [
+      "One connected platform for committees, residents and security teams",
+      "Designed for communities of every size, from apartments to townships",
+      "Built for long-term partnership, not just software delivery",
+    ],
+    badge: { title: "Admin · Living · Gate", subtitle: "One connected platform" },
+  },
+  suite: {
+    eyebrow: "The Suite",
+    heading: "One platform, three products",
+    subheading: "Each app serves a different part of community life — and they work together as one.",
+  },
+};
