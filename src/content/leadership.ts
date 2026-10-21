@@ -33,11 +33,11 @@ export const leaders: Leader[] = [
     social: {},
   },
   {
-    slug: "ankithsha",
-    name: "Ankithsha",
-    role: "Co-Founder",
+    slug: "vishnu",
+    name: "Vishnu",
+    role: "Co-Founder", // TODO: confirm Vishnu's actual title
     bio: "Contributing to Nexora's vision and helping shape the company's product and technology journey.",
-    initials: "A",
+    initials: "V",
     social: {},
   },
 ];
