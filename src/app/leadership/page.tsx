@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import PageHeader from "@/components/PageHeader";
-import LeadershipSection from "@/components/sections/LeadershipSection";
+import LeadershipHero from "@/components/sections/LeadershipHero";
+import LeadershipTeam from "@/components/sections/LeadershipTeam";
+import VisionMission from "@/components/sections/VisionMission";
 import ClientCta from "@/components/sections/ClientCta";
 import { pageSeo } from "@/content/seo";
-import { leadershipIntro } from "@/content/leadership";
 
 export const metadata: Metadata = {
   title: pageSeo.leadership.title,
@@ -13,12 +13,9 @@ export const metadata: Metadata = {
 export default function LeadershipPage() {
   return (
     <>
-      <PageHeader
-        eyebrow="Leadership"
-        heading={leadershipIntro.heading}
-        subheading={leadershipIntro.subheading}
-      />
-      <LeadershipSection showHeading={false} />
+      <LeadershipHero />
+      <LeadershipTeam />
+      <VisionMission />
       <ClientCta />
     </>
   );
