@@ -1,7 +1,7 @@
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import Button from "@/components/Button";
-import ProductCard from "@/components/ProductCard";
+import ProductTile from "@/components/ProductTile";
 import { products, productsIntro } from "@/content/products";
 
 export default function ProductsSection({
@@ -19,9 +19,9 @@ export default function ProductsSection({
         ) : null}
         <p className="mx-auto mt-4 max-w-2xl text-center text-muted">{productsIntro.body}</p>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 sm:[&>*:last-child]:col-span-2 lg:grid-cols-3 lg:[&>*:last-child]:col-span-1">
           {products.map((product, i) => (
-            <ProductCard key={product.slug} product={product} delay={i * 0.08} />
+            <ProductTile key={product.slug} product={product} delay={i * 0.08} />
           ))}
         </div>
 
