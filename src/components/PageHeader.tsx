@@ -11,7 +11,7 @@ export default function PageHeader({
   subheading?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-ink py-20 text-white sm:py-28">
+    <section className="relative overflow-hidden bg-ink pb-20 pt-32 text-white sm:pb-28 sm:pt-36">
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.06]"
         style={{

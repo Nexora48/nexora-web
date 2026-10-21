@@ -12,7 +12,7 @@ export default function ProductHero({ product }: { product: Product }) {
   const photo = localImage(product.slug);
 
   return (
-    <section className="relative overflow-hidden bg-ink py-16 text-white sm:py-24">
+    <section className="relative overflow-hidden bg-ink pb-16 pt-28 text-white sm:pb-24 sm:pt-32">
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.06]"
         style={{

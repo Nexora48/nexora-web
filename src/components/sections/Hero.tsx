@@ -9,8 +9,8 @@ import { hero } from "@/content/hero";
 import { company } from "@/content/company";
 
 const floatingCards = [
-  { icon: "LayoutDashboard", label: "Nexora Admin", className: "left-[4%] top-[18%] lg:left-[8%]" },
-  { icon: "House", label: "Nexora Living", className: "right-[2%] top-[8%] lg:right-[6%]" },
+  { icon: "LayoutDashboard", label: "Nexora Admin", className: "left-[4%] top-[28%] lg:left-[8%]" },
+  { icon: "House", label: "Nexora Living", className: "right-[2%] top-[20%] lg:right-[6%]" },
   { icon: "ShieldCheck", label: "Nexora Gate", className: "left-[10%] bottom-[10%] lg:left-[14%]" },
   { icon: "Users", label: "Built for Communities", className: "right-[4%] bottom-[16%] lg:right-[10%]" },
 ];
