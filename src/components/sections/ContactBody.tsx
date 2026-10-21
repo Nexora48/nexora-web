@@ -12,7 +12,7 @@ const socialPlatforms: Array<{ key: keyof typeof contactDetails.social; icon: st
   { key: "github", icon: "Github", label: "GitHub" },
 ];
 
-export default function ContactBody() {
+export default function ContactBody({ overlap = true }: { overlap?: boolean }) {
   const details = [
     { icon: Mail, label: "Email", value: contactDetails.email, href: `mailto:${contactDetails.email}` },
     {
@@ -25,9 +25,9 @@ export default function ContactBody() {
   ];
 
   return (
-    <section className="pb-16 sm:pb-24">
+    <section className={overlap ? "pb-16 sm:pb-24" : "pb-16 pt-10 sm:pb-24"}>
       <Container>
-        <div className="relative z-10 -mt-28 grid gap-8 sm:-mt-32 lg:grid-cols-5">
+        <div className={`relative z-10 grid gap-8 lg:grid-cols-5 ${overlap ? "-mt-28 sm:-mt-32" : ""}`}>
           <Reveal className="lg:col-span-3">
             <div className="rounded-card border border-border bg-background p-6 shadow-lifted sm:p-10">
               <h2 className="font-display text-2xl font-semibold">{contactPage.form.title}</h2>
