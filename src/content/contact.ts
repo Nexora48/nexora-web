@@ -31,3 +31,25 @@ export const budgetRanges = [
   "$50,000+",
   "Not sure yet",
 ];
+
+// Copy for the dedicated /contact page.
+export const contactPage = {
+  hero: {
+    eyebrow: "Contact",
+    heading: "Let's talk about your community.",
+    subheading:
+      "Tell us about your society, township or apartment complex and we'll show you how Nexora Admin, Living and Gate can help.",
+  },
+  form: {
+    title: "Send us a message",
+    subtitle: "Share a few details and we'll get back to you.",
+  },
+  next: {
+    title: "What happens next",
+    steps: [
+      "You tell us about your community and what you need.",
+      "We walk you through how Admin, Living and Gate fit.",
+      "We plan the next steps together.",
+    ],
+  },
+};
