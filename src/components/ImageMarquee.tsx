@@ -16,10 +16,10 @@ const scenes = [
 ];
 
 const gradients = [
-  "from-brand/25 via-surface-alt to-accent/15",
-  "from-accent/25 via-surface-alt to-brand/15",
-  "from-brand-light/25 via-surface-alt to-brand/10",
-  "from-brand/15 via-surface-alt to-accent/25",
+  "from-brand/25 via-surface-alt to-brand-light/15",
+  "from-brand-light/25 via-surface-alt to-brand/15",
+  "from-brand/20 via-surface-alt to-accent/10",
+  "from-brand-light/15 via-surface-alt to-accent/15",
 ];
 
 export default function ImageMarquee() {

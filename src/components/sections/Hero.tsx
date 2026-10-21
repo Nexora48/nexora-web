@@ -18,7 +18,7 @@ export default function Hero() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="relative overflow-hidden bg-[#0b0b12] text-white">
+    <section className="relative overflow-hidden bg-ink text-white">
       {/* Background layers */}
       <div className="pointer-events-none absolute inset-0">
         <div
@@ -29,8 +29,8 @@ export default function Hero() {
             backgroundSize: "56px 56px",
           }}
         />
-        <div className="absolute left-1/2 top-[-10%] h-[560px] w-[560px] -translate-x-1/2 rounded-full bg-brand/40 blur-[120px]" />
-        <div className="absolute bottom-[-15%] right-[8%] h-[420px] w-[420px] rounded-full bg-accent/25 blur-[110px]" />
+        <div className="absolute left-1/2 top-[-10%] h-[560px] w-[560px] -translate-x-1/2 rounded-full bg-brand-solid/50 blur-[120px]" />
+        <div className="absolute bottom-[-15%] right-[8%] h-[420px] w-[420px] rounded-full bg-accent/15 blur-[110px]" />
 
         {!shouldReduceMotion &&
           floatingCards.map((card, i) => (
@@ -44,7 +44,7 @@ export default function Hero() {
                 y: { duration: 5 + i, repeat: Infinity, ease: "easeInOut", delay: i * 0.4 },
               }}
             >
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-light to-accent">
+              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-solid to-brand-light">
                 <Icon name={card.icon} className="h-4 w-4 text-white" />
               </span>
               <span className="text-xs font-medium text-white/80">{card.label}</span>

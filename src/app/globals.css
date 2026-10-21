@@ -6,36 +6,41 @@
 /* bg-brand, text-accent, shadow-glow, rounded-card.                   */
 /* ------------------------------------------------------------------ */
 :root {
+  /* Light: clean white, cool slate neutrals */
   --background: #ffffff;
-  --surface: #f8f8fb;
-  --surface-alt: #f1f0f8;
-  --foreground: #12131a;
-  --muted: #5c5f6e;
-  --border: #e7e6f0;
+  --surface: #f5f8fa;
+  --surface-alt: #e9eff4;
+  --foreground: #0b1b2b;
+  --muted: #4f5f70;
+  --border: #dce4eb;
 
-  --brand: #4338ca; /* primary — indigo */
-  --brand-light: #6366f1;
-  --brand-dark: #2c2790;
-  --accent: #22d3ee; /* single accent — cyan */
-  --accent-dark: #0891b2;
+  /* Brand: deep teal. Accent: warm amber, used sparingly. */
+  --brand: #0f766e; /* text/icon accents on light surfaces */
+  --brand-light: #14b8a6;
+  --brand-dark: #115e59;
+  --brand-solid: #0f766e; /* filled buttons (white text, AA contrast) */
+  --brand-solid-dark: #115e59;
+  --accent: #f59e0b;
+  --accent-dark: #b45309;
+  --ink: #0a1626; /* always-dark navy bands: hero, footer, CTA */
 
-  --shadow-color: 234 30% 15%;
+  --shadow-color: 215 45% 12%;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0b0b12;
-    --surface: #12131c;
-    --surface-alt: #181a26;
-    --foreground: #f4f4f8;
-    --muted: #9a9cae;
-    --border: #23253364;
+    --background: #09111d;
+    --surface: #0f1a2b;
+    --surface-alt: #152238;
+    --foreground: #eef3f8;
+    --muted: #92a2b5;
+    --border: #1e2d45;
 
-    --brand: #6366f1;
-    --brand-light: #818cf8;
-    --brand-dark: #3730a3;
-    --accent: #22d3ee;
-    --accent-dark: #0e7490;
+    --brand: #2dd4bf; /* lighter teal for text on dark */
+    --brand-light: #5eead4;
+    --brand-dark: #14b8a6;
+    --accent: #fbbf24;
+    --accent-dark: #d97706;
   }
 }
 
@@ -50,6 +55,9 @@
   --color-brand: var(--brand);
   --color-brand-light: var(--brand-light);
   --color-brand-dark: var(--brand-dark);
+  --color-brand-solid: var(--brand-solid);
+  --color-brand-solid-dark: var(--brand-solid-dark);
+  --color-ink: var(--ink);
   --color-accent: var(--accent);
   --color-accent-dark: var(--accent-dark);
 
@@ -61,7 +69,7 @@
 
   --shadow-soft: 0 1px 2px hsl(var(--shadow-color) / 0.04), 0 12px 32px -12px hsl(var(--shadow-color) / 0.14);
   --shadow-lifted: 0 4px 8px hsl(var(--shadow-color) / 0.06), 0 24px 48px -16px hsl(var(--shadow-color) / 0.22);
-  --shadow-glow: 0 0 0 1px hsl(var(--shadow-color) / 0.04), 0 8px 40px -8px color-mix(in srgb, var(--brand) 45%, transparent);
+  --shadow-glow: 0 0 0 1px hsl(var(--shadow-color) / 0.04), 0 8px 40px -8px color-mix(in srgb, var(--brand-solid) 45%, transparent);
 }
 
 * {

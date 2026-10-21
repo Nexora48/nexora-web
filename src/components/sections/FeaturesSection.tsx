@@ -19,7 +19,7 @@ export default function FeaturesSection({ showHeading = true }: { showHeading?: 
                 id={feature.slug}
                 className="flex h-full scroll-mt-28 flex-col rounded-card border border-border bg-surface p-7 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-lifted"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand/15 to-accent/10 text-brand">
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand/15 to-brand-light/10 text-brand">
                   <Icon name={feature.icon} className="h-6 w-6" />
                 </span>
                 <h3 className="mt-5 font-display text-lg font-semibold">{feature.title}</h3>

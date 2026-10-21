@@ -213,7 +213,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="flex min-h-11 w-full items-center justify-center gap-2 rounded-pill bg-brand px-6 py-3 text-sm font-semibold text-white shadow-glow transition-all hover:-translate-y-0.5 hover:bg-brand-dark disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+        className="flex min-h-11 w-full items-center justify-center gap-2 rounded-pill bg-brand-solid px-6 py-3 text-sm font-semibold text-white shadow-glow transition-all hover:-translate-y-0.5 hover:bg-brand-solid-dark disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
       >
         {status === "loading" ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> : null}
         {status === "loading" ? "Sending…" : contactIntro.submitLabel}

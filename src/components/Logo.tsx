@@ -12,7 +12,7 @@ export default function Logo({ className, mark = "auto" }: { className?: string;
   return (
     <Link href="/" className={cn("group flex items-center gap-2.5", className)} aria-label="Nexora Pvt — Home">
       <span
-        className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand via-brand-light to-accent shadow-glow transition-transform duration-300 group-hover:scale-105"
+        className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-solid to-brand-light shadow-glow transition-transform duration-300 group-hover:scale-105"
         aria-hidden="true"
       >
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none">

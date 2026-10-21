@@ -4,7 +4,7 @@ import { company } from "@/content/company";
 
 export default function VisionMission() {
   return (
-    <section className="relative overflow-hidden bg-[#0b0b12] py-16 text-white sm:py-24">
+    <section className="relative overflow-hidden bg-ink py-16 text-white sm:py-24">
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.06]"
         style={{
@@ -14,8 +14,8 @@ export default function VisionMission() {
         }}
         aria-hidden="true"
       />
-      <div className="pointer-events-none absolute -left-24 top-1/2 h-[380px] w-[380px] -translate-y-1/2 rounded-full bg-brand/30 blur-[110px]" />
-      <div className="pointer-events-none absolute -right-24 top-1/4 h-[320px] w-[320px] rounded-full bg-accent/20 blur-[110px]" />
+      <div className="pointer-events-none absolute -left-24 top-1/2 h-[380px] w-[380px] -translate-y-1/2 rounded-full bg-brand-solid/40 blur-[110px]" />
+      <div className="pointer-events-none absolute -right-24 top-1/4 h-[320px] w-[320px] rounded-full bg-accent/12 blur-[110px]" />
 
       <Container className="relative">
         <h2 className="sr-only">Our Vision &amp; Mission</h2>

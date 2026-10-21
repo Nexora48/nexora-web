@@ -9,7 +9,7 @@ export default function LeaderCard({ leader, delay = 0 }: { leader: Leader; dela
     <Reveal delay={delay} className="h-full">
       <div className="flex h-full flex-col items-center rounded-card border border-border bg-surface p-8 text-center shadow-soft transition-shadow hover:shadow-lifted">
         <div
-          className="flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-brand via-brand-light to-accent font-display text-3xl font-semibold text-white shadow-glow"
+          className="flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-brand-solid to-brand-light font-display text-3xl font-semibold text-white shadow-glow"
           aria-hidden="true"
         >
           {leader.initials}

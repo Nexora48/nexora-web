@@ -8,7 +8,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/10 bg-[#0b0b12] text-white/70">
+    <footer className="border-t border-white/10 bg-ink text-white/70">
       <Container className="grid grid-cols-2 gap-10 py-16 sm:grid-cols-3 lg:grid-cols-6">
         <div className="col-span-2 sm:col-span-3 lg:col-span-2">
           <Logo mark="light" />

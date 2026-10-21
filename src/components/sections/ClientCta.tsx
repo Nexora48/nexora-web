@@ -5,7 +5,7 @@ import { clientCta } from "@/content/cta";
 
 export default function ClientCta() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-brand via-brand-dark to-[#0b0b12] py-16 text-white sm:py-24">
+    <section className="relative overflow-hidden bg-gradient-to-br from-brand-solid via-brand-solid-dark to-ink py-16 text-white sm:py-24">
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.08]"
         style={{
@@ -15,7 +15,7 @@ export default function ClientCta() {
         }}
         aria-hidden="true"
       />
-      <div className="pointer-events-none absolute right-[-10%] top-[-30%] h-[420px] w-[420px] rounded-full bg-accent/30 blur-[120px]" />
+      <div className="pointer-events-none absolute right-[-10%] top-[-30%] h-[420px] w-[420px] rounded-full bg-accent/20 blur-[120px]" />
 
       <Container className="relative text-center">
         <Reveal className="mx-auto max-w-2xl">
@@ -24,7 +24,7 @@ export default function ClientCta() {
           </h2>
           <p className="mt-5 text-balance text-white/80">{clientCta.body}</p>
           <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
-            <Button href={clientCta.primaryCta.href} className="!bg-white !text-brand-dark hover:!bg-white/90">
+            <Button href={clientCta.primaryCta.href} className="!bg-white !text-brand-solid-dark hover:!bg-white/90">
               {clientCta.primaryCta.label}
             </Button>
             <Button
