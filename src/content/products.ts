@@ -66,3 +66,17 @@ export const products: Product[] = [
     ],
   },
 ];
+
+// Copy for the dedicated /products page.
+export const productsPage = {
+  hero: {
+    eyebrow: "Products",
+    heading: "Our Product Suite",
+    subheading: "One connected platform for residential communities — built for committees, residents and security teams.",
+  },
+  together: {
+    eyebrow: "Better Together",
+    heading: "Three apps. One connected platform.",
+    body: "A visitor logged in Nexora Gate reaches the resident in Nexora Living, and every entry, payment and request lands in Nexora Admin — no re-entry, no gaps.",
+  },
+};
