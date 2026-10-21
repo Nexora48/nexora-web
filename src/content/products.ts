@@ -10,6 +10,7 @@ export type Product = {
   description: string;
   longDescription: string;
   features: string[];
+  featureSlugs: string[]; // slugs from content/features.ts shown on the product page
 };
 
 export const productsIntro = {
@@ -33,6 +34,7 @@ export const products: Product[] = [
       "Billing and dues tracking",
       "Notices, approvals and reports from one dashboard",
     ],
+    featureSlugs: ["accounting-billing", "staff-vendor-management", "notices-announcements", "complaints-service-requests"],
   },
   {
     slug: "nexora-living",
@@ -49,6 +51,7 @@ export const products: Product[] = [
       "Bills and payments",
       "Maintenance and service requests",
     ],
+    featureSlugs: ["amenity-booking", "payments-dues", "complaints-service-requests", "notices-announcements", "emergency-alerts"],
   },
   {
     slug: "nexora-gate",
@@ -64,6 +67,7 @@ export const products: Product[] = [
       "Guard and security check-in app",
       "Real-time entry and exit logs",
     ],
+    featureSlugs: ["visitor-gate-approvals", "parking-vehicle-tracking", "emergency-alerts"],
   },
 ];
 
