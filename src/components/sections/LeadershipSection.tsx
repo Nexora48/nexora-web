@@ -5,7 +5,7 @@ import { leadershipIntro, leaders } from "@/content/leadership";
 
 export default function LeadershipSection({ showHeading = true }: { showHeading?: boolean }) {
   return (
-    <section id="leadership" className="py-24 sm:py-32">
+    <section id="leadership" className="py-16 sm:py-24">
       <Container>
         {showHeading ? (
           <SectionHeading

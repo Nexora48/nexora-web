@@ -31,9 +31,7 @@ export default function LeaderCard({ leader, delay = 0 }: { leader: Leader; dela
               </a>
             ))}
           </div>
-        ) : (
-          <p className="mt-5 text-xs text-muted/70">Social links coming soon</p>
-        )}
+        ) : null}
       </div>
     </Reveal>
   );

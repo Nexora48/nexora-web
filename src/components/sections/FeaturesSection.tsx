@@ -6,7 +6,7 @@ import { features, featuresIntro } from "@/content/features";
 
 export default function FeaturesSection({ showHeading = true }: { showHeading?: boolean }) {
   return (
-    <section id="features" className="py-24 sm:py-32">
+    <section id="features" className="py-16 sm:py-24">
       <Container>
         {showHeading ? (
           <SectionHeading eyebrow="Features" heading={featuresIntro.heading} subheading={featuresIntro.subheading} />

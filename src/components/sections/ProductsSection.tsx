@@ -12,7 +12,7 @@ export default function ProductsSection({
   showHeading?: boolean;
 }) {
   return (
-    <section id="products" className="bg-surface/40 py-24 sm:py-32">
+    <section id="products" className="bg-surface/40 py-16 sm:py-24">
       <Container>
         {showHeading ? (
           <SectionHeading eyebrow="Products" heading={productsIntro.heading} subheading={productsIntro.subheading} />

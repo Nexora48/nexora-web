@@ -5,7 +5,7 @@ import { clientCta } from "@/content/cta";
 
 export default function ClientCta() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-brand via-brand-dark to-[#0b0b12] py-24 text-white sm:py-28">
+    <section className="relative overflow-hidden bg-gradient-to-br from-brand via-brand-dark to-[#0b0b12] py-16 text-white sm:py-24">
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.08]"
         style={{

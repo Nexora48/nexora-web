@@ -5,7 +5,7 @@ import { industries, industriesIntro } from "@/content/industries";
 
 export default function IndustriesSection() {
   return (
-    <section id="industries" className="py-24 sm:py-32">
+    <section id="industries" className="py-16 sm:py-24">
       <Container>
         <SectionHeading eyebrow="Industries" heading={industriesIntro.heading} />
 

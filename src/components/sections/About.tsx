@@ -5,7 +5,7 @@ import { about } from "@/content/about";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 sm:py-32">
+    <section id="about" className="py-16 sm:py-24">
       <Container>
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="inline-block rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium uppercase tracking-wider text-brand">

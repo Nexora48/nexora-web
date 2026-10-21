@@ -6,7 +6,7 @@ import { whyNexoraIntro, whyNexoraReasons } from "@/content/whyNexora";
 
 export default function WhyNexora() {
   return (
-    <section id="why-nexora" className="bg-surface/40 py-24 sm:py-32">
+    <section id="why-nexora" className="bg-surface/40 py-16 sm:py-24">
       <Container>
         <SectionHeading eyebrow="Why Nexora" heading={whyNexoraIntro.heading} />
 

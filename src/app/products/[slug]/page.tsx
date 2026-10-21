@@ -35,7 +35,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     <>
       <PageHeader eyebrow={product.category} heading={product.name} subheading={product.description} />
 
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24">
         <Container>
           <div className="grid gap-12 lg:grid-cols-3">
             <Reveal className="lg:col-span-2">

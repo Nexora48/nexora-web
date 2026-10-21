@@ -14,7 +14,7 @@ const socialPlatforms: Array<{ key: keyof typeof contactDetails.social; icon: st
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-24 sm:py-32">
+    <section id="contact" className="py-16 sm:py-24">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
@@ -69,9 +69,6 @@ export default function ContactSection() {
                 ))}
               </div>
 
-              <p className="mt-6 text-xs leading-relaxed text-muted/80">
-                Contact details shown are placeholders and will be replaced with Nexora Pvt&apos;s real details.
-              </p>
             </div>
           </Reveal>
         </div>
