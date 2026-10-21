@@ -1,7 +1,8 @@
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
+import SectionHeading from "@/components/SectionHeading";
 import SocialIcon from "@/components/SocialIcon";
-import { leaders, type Leader } from "@/content/leadership";
+import { leaders, leadershipIntro, type Leader } from "@/content/leadership";
 
 function Socials({ leader }: { leader: Leader }) {
   const links = Object.entries(leader.social).filter(([, href]) => href);
@@ -22,12 +23,21 @@ function Socials({ leader }: { leader: Leader }) {
   );
 }
 
-export default function LeadershipTeam() {
+export default function LeadershipTeam({ showHeading = false, id }: { showHeading?: boolean; id?: string }) {
   const [lead, ...others] = leaders;
 
   return (
-    <section className="py-16 sm:py-24">
+    <section id={id} className="py-16 sm:py-24">
       <Container>
+        {showHeading ? (
+          <div className="mb-12">
+            <SectionHeading
+              eyebrow="Leadership"
+              heading={leadershipIntro.heading}
+              subheading={leadershipIntro.subheading}
+            />
+          </div>
+        ) : null}
         {lead ? (
           <Reveal>
             <article className="relative overflow-hidden rounded-card border border-border bg-surface p-8 shadow-lifted sm:p-12">
