@@ -1,36 +1,23 @@
+import { Sparkles } from "lucide-react";
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import SocialIcon from "@/components/SocialIcon";
-import { leaders, leadershipIntro, type Leader } from "@/content/leadership";
+import { leaders, leadershipIntro } from "@/content/leadership";
+import { cn } from "@/lib/utils";
 
-function Socials({ leader }: { leader: Leader }) {
-  const links = Object.entries(leader.social).filter(([, href]) => href);
-  if (links.length === 0) return null;
-  return (
-    <div className="mt-5 flex gap-2">
-      {links.map(([platform, href]) => (
-        <a
-          key={platform}
-          href={href}
-          aria-label={`${leader.name} on ${platform}`}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted transition-colors hover:border-brand/40 hover:text-brand"
-        >
-          <SocialIcon name={platform.charAt(0).toUpperCase() + platform.slice(1)} className="h-4 w-4" />
-        </a>
-      ))}
-    </div>
-  );
-}
+const covers = [
+  "from-brand-solid via-brand-solid-dark to-ink",
+  "from-brand-solid-dark via-ink to-brand-solid",
+  "from-ink via-brand-solid-dark to-brand-solid",
+];
 
 export default function LeadershipTeam({ showHeading = false, id }: { showHeading?: boolean; id?: string }) {
-  const [lead, ...others] = leaders;
-
   return (
     <section id={id} className="py-16 sm:py-24">
       <Container>
         {showHeading ? (
-          <div className="mb-12">
+          <div className="mb-14">
             <SectionHeading
               eyebrow="Leadership"
               heading={leadershipIntro.heading}
@@ -38,51 +25,78 @@ export default function LeadershipTeam({ showHeading = false, id }: { showHeadin
             />
           </div>
         ) : null}
-        {lead ? (
-          <Reveal>
-            <article className="relative overflow-hidden rounded-card border border-border bg-surface p-8 shadow-lifted sm:p-12">
-              <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-brand-solid/15 blur-3xl" />
-              <div className="relative grid items-center gap-8 md:grid-cols-[auto_1fr] md:gap-12">
-                <div
-                  className="flex h-36 w-36 items-center justify-center rounded-3xl bg-gradient-to-br from-brand-solid to-brand-light font-display text-6xl font-semibold text-white shadow-glow sm:h-44 sm:w-44 sm:text-7xl"
-                  aria-hidden="true"
-                >
-                  {lead.initials}
-                </div>
-                <div>
-                  <span className="inline-block rounded-full bg-brand/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-brand">
-                    {lead.role}
-                  </span>
-                  <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">{lead.name}</h2>
-                  <p className="mt-4 max-w-2xl text-lg text-muted">{lead.bio}</p>
-                  <Socials leader={lead} />
-                </div>
-              </div>
-            </article>
-          </Reveal>
-        ) : null}
 
-        <div className="mt-8 grid gap-8 md:grid-cols-2">
-          {others.map((leader, i) => (
-            <Reveal key={leader.slug} delay={(i + 1) * 0.08} className="h-full">
-              <article className="flex h-full flex-col gap-6 rounded-card border border-border bg-surface p-8 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-lifted sm:flex-row sm:items-start">
-                <div
-                  className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-solid to-brand-light font-display text-3xl font-semibold text-white shadow-glow"
-                  aria-hidden="true"
+        <div className="grid gap-8 md:grid-cols-3">
+          {leaders.map((leader, i) => {
+            const links = Object.entries(leader.social).filter(([, href]) => href);
+            const founder = i === 0;
+            return (
+              <Reveal key={leader.slug} delay={i * 0.1} className="h-full">
+                <article
+                  className={cn(
+                    "group relative flex h-full flex-col overflow-hidden rounded-card border bg-surface transition-all duration-300 hover:-translate-y-2 hover:shadow-lifted",
+                    founder ? "border-brand/40 shadow-glow" : "border-border shadow-soft"
+                  )}
                 >
-                  {leader.initials}
-                </div>
-                <div>
-                  <span className="inline-block rounded-full bg-brand/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-brand">
-                    {leader.role}
-                  </span>
-                  <h3 className="mt-3 font-display text-2xl font-semibold">{leader.name}</h3>
-                  <p className="mt-3 text-sm text-muted">{leader.bio}</p>
-                  <Socials leader={leader} />
-                </div>
-              </article>
-            </Reveal>
-          ))}
+                  <div className={cn("relative h-52 overflow-hidden bg-gradient-to-br", covers[i % covers.length])}>
+                    <div
+                      className="absolute inset-0 opacity-[0.12]"
+                      style={{
+                        backgroundImage:
+                          "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
+                        backgroundSize: "28px 28px",
+                      }}
+                      aria-hidden="true"
+                    />
+                    <div className="absolute -right-8 -top-8 h-40 w-40 rounded-full bg-brand-light/40 blur-3xl animate-drift motion-reduce:animate-none" />
+                    <div className="absolute -bottom-10 -left-6 h-36 w-36 rounded-full bg-accent/25 blur-3xl animate-drift motion-reduce:animate-none" />
+
+                    <span className="absolute left-5 top-5 font-display text-sm font-semibold tracking-widest text-white/70">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    {founder ? (
+                      <span className="absolute right-5 top-5 inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/15 px-3 py-1 text-[11px] font-medium text-white backdrop-blur">
+                        <Sparkles className="h-3 w-3" aria-hidden="true" />
+                        Founder
+                      </span>
+                    ) : null}
+
+                    <div
+                      className="absolute left-1/2 top-1/2 flex h-28 w-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-white/15 font-display text-5xl font-semibold text-white shadow-lifted ring-8 ring-white/10 backdrop-blur transition-transform duration-500 group-hover:scale-110"
+                      aria-hidden="true"
+                    >
+                      {leader.initials}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-1 flex-col p-7">
+                    <h3 className="font-display text-2xl font-semibold">{leader.name}</h3>
+                    <p className="mt-1 text-sm font-medium text-brand">{leader.role}</p>
+                    <p className="mt-4 flex-1 text-sm leading-relaxed text-muted">{leader.bio}</p>
+
+                    <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
+                      <span className="text-xs font-medium uppercase tracking-wider text-muted">Nexora Leadership</span>
+                      <div className="flex gap-2">
+                        {links.map(([platform, href]) => (
+                          <a
+                            key={platform}
+                            href={href}
+                            aria-label={`${leader.name} on ${platform}`}
+                            className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted transition-colors hover:border-brand/40 hover:text-brand"
+                          >
+                            <SocialIcon
+                              name={platform.charAt(0).toUpperCase() + platform.slice(1)}
+                              className="h-4 w-4"
+                            />
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </Reveal>
+            );
+          })}
         </div>
       </Container>
     </section>

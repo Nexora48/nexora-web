@@ -132,3 +132,17 @@ body {
   background-clip: text;
   color: transparent;
 }
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(14px, -10px, 0) scale(1.08);
+  }
+}
+
+.animate-drift {
+  animation: drift 9s ease-in-out infinite;
+}
