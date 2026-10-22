@@ -1,4 +1,3 @@
-import { Sparkles } from "lucide-react";
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
@@ -50,16 +49,6 @@ export default function LeadershipTeam({ showHeading = false, id }: { showHeadin
                     />
                     <div className="absolute -right-8 -top-8 h-40 w-40 rounded-full bg-brand-light/40 blur-3xl animate-drift motion-reduce:animate-none" />
                     <div className="absolute -bottom-10 -left-6 h-36 w-36 rounded-full bg-accent/25 blur-3xl animate-drift motion-reduce:animate-none" />
-
-                    <span className="absolute left-5 top-5 font-display text-sm font-semibold tracking-widest text-white/70">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    {founder ? (
-                      <span className="absolute right-5 top-5 inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/15 px-3 py-1 text-[11px] font-medium text-white backdrop-blur">
-                        <Sparkles className="h-3 w-3" aria-hidden="true" />
-                        Founder
-                      </span>
-                    ) : null}
 
                     <div
                       className="absolute left-1/2 top-1/2 flex h-28 w-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-white/15 font-display text-5xl font-semibold text-white shadow-lifted ring-8 ring-white/10 backdrop-blur transition-transform duration-500 group-hover:scale-110"

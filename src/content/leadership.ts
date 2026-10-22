@@ -19,7 +19,7 @@ export const leaders: Leader[] = [
   {
     slug: "supriya",
     name: "Supriya",
-    role: "Founder & CEO",
+    role: "Founder",
     bio: "Leading Nexora's vision, strategy and growth with a focus on building meaningful products and creating long-term value through technology.",
     initials: "S",
     social: {},
