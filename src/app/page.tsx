@@ -14,7 +14,7 @@ import ContactSection from "@/components/sections/ContactSection";
 export default function Home() {
   return (
     <>
-      <Hero backgroundSrc={localImage("hero")} visualSrc={localImage("nexora-living")} />
+      <Hero backgroundSrc={localImage("hero")} />
       <About />
       <ProductsSection />
       <FeaturesSection />

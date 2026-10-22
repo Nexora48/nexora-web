@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState, type PointerEvent } from "react";
+import { useRef, type PointerEvent } from "react";
 import Image from "next/image";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, Check, ShieldCheck, X } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import Container from "@/components/Container";
 import Button from "@/components/Button";
 import Icon from "@/components/Icon";
@@ -11,33 +11,17 @@ import { hero } from "@/content/hero";
 import { company } from "@/content/company";
 import { products } from "@/content/products";
 import { features } from "@/content/features";
+import HeroVisual from "@/components/sections/HeroVisual";
 
-type HeroProps = { backgroundSrc?: string | null; visualSrc?: string | null };
+type HeroProps = { backgroundSrc?: string | null };
 
-// Illustrative activity — shows the kind of events the suite handles. No real data.
-const feed = [
-  { icon: "ShieldCheck", title: "Visitor approved", sub: "Delivery · Main Gate" },
-  { icon: "CalendarCheck", title: "Clubhouse booked", sub: "Saturday · Confirmed" },
-  { icon: "CreditCard", title: "Maintenance paid", sub: "Receipt sent" },
-  { icon: "Wrench", title: "Complaint resolved", sub: "Closed by the committee" },
-  { icon: "Megaphone", title: "New notice posted", sub: "Sent to every household" },
-  { icon: "Car", title: "Vehicle entry logged", sub: "Gate 2 · Resident" },
-];
-
-export default function Hero({ backgroundSrc = null, visualSrc = null }: HeroProps) {
+export default function Hero({ backgroundSrc = null }: HeroProps) {
   const reduce = useReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
-  const [tick, setTick] = useState(2);
 
   const accent: string = hero.accent;
   const [before, after] =
     accent && hero.headline.includes(accent) ? hero.headline.split(accent) : [hero.headline, null];
-
-  useEffect(() => {
-    if (reduce) return;
-    const id = window.setInterval(() => setTick((t) => t + 1), 3200);
-    return () => window.clearInterval(id);
-  }, [reduce]);
 
   function onPointerMove(e: PointerEvent<HTMLElement>) {
     if (reduce || e.pointerType !== "mouse" || !sectionRef.current) return;
@@ -46,20 +30,11 @@ export default function Hero({ backgroundSrc = null, visualSrc = null }: HeroPro
     sectionRef.current.style.setProperty("--my", `${e.clientY - rect.top}px`);
   }
 
-  const float = (delay: number, distance = 10) =>
-    reduce
-      ? {}
-      : {
-          animate: { y: [0, -distance, 0] },
-          transition: { duration: 6, repeat: Infinity, ease: "easeInOut" as const, delay },
-        };
-
   const rise = (delay: number) =>
     reduce
       ? {}
       : { initial: { opacity: 0, y: 24 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.7, delay } };
 
-  const visible = [tick, tick - 1, tick - 2];
   const ticker = [...features, ...features];
 
   return (
@@ -155,93 +130,8 @@ export default function Hero({ backgroundSrc = null, visualSrc = null }: HeroPro
         </div>
 
         {/* Decorative product preview — illustrative UI, no real data */}
-        <motion.div {...rise(0.25)} className="relative mx-auto w-full max-w-md lg:max-w-none" aria-hidden="true">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-white/15 bg-gradient-to-br from-brand-solid/40 via-surface-alt/20 to-ink shadow-lifted">
-            {visualSrc ? (
-              <Image
-                src={visualSrc}
-                alt=""
-                fill
-                priority
-                quality={80}
-                sizes="(min-width: 1024px) 480px, 100vw"
-                className="object-cover"
-              />
-            ) : null}
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-ink/20" />
-          </div>
-
-          <motion.div
-            {...float(0)}
-            className="absolute -left-4 top-10 w-64 rounded-2xl border border-white/15 bg-ink/70 p-4 shadow-lifted backdrop-blur-xl sm:-left-10"
-          >
-            <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-solid to-brand-light">
-                <ShieldCheck className="h-5 w-5" />
-              </span>
-              <div>
-                <p className="text-sm font-semibold">Visitor at the gate</p>
-                <p className="text-xs text-white/60">Delivery · Main Gate</p>
-              </div>
-            </div>
-            <div className="mt-4 flex gap-2">
-              <span className="flex flex-1 items-center justify-center gap-1 rounded-lg bg-brand-solid py-2 text-xs font-medium">
-                <Check className="h-3.5 w-3.5" /> Approve
-              </span>
-              <span className="flex flex-1 items-center justify-center gap-1 rounded-lg bg-white/10 py-2 text-xs font-medium text-white/80">
-                <X className="h-3.5 w-3.5" /> Decline
-              </span>
-            </div>
-          </motion.div>
-
-          <motion.div
-            {...float(1.6, 12)}
-            className="absolute -right-3 top-[42%] w-52 rounded-2xl border border-white/15 bg-ink/70 p-4 shadow-lifted backdrop-blur-xl sm:-right-8"
-          >
-            <p className="text-xs font-medium text-white/60">Society dashboard</p>
-            <div className="mt-3 flex h-12 items-end gap-1.5">
-              {[40, 65, 50, 85, 60, 95, 75].map((h, i) => (
-                <span
-                  key={i}
-                  className="flex-1 rounded-t bg-gradient-to-t from-brand-solid to-brand-light"
-                  style={{ height: `${h}%`, opacity: 0.55 + i * 0.07 }}
-                />
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Live activity feed */}
-          <div className="absolute -bottom-6 left-4 w-64 sm:left-8">
-            <p className="mb-2 flex items-center gap-2 text-[11px] font-medium uppercase tracking-wider text-white/60">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand-light" /> Live activity
-            </p>
-            <ul className="relative space-y-2">
-              <AnimatePresence initial={false} mode="popLayout">
-                {visible.map((id, index) => {
-                  const item = feed[((id % feed.length) + feed.length) % feed.length];
-                  return (
-                    <motion.li
-                      key={id}
-                      layout={!reduce}
-                      initial={reduce ? false : { opacity: 0, y: -18, scale: 0.96 }}
-                      animate={{ opacity: 1 - index * 0.28, y: 0, scale: 1 }}
-                      exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.94 }}
-                      transition={{ type: "spring", stiffness: 320, damping: 30 }}
-                      className="flex items-center gap-3 rounded-xl border border-white/15 bg-ink/80 px-3 py-2.5 backdrop-blur-xl"
-                    >
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10">
-                        <Icon name={item.icon} className="h-4 w-4 text-brand-light" />
-                      </span>
-                      <span className="min-w-0">
-                        <span className="block truncate text-xs font-semibold">{item.title}</span>
-                        <span className="block truncate text-[11px] text-white/55">{item.sub}</span>
-                      </span>
-                    </motion.li>
-                  );
-                })}
-              </AnimatePresence>
-            </ul>
-          </div>
+        <motion.div {...rise(0.25)} className="w-full">
+          <HeroVisual />
         </motion.div>
       </Container>
 
