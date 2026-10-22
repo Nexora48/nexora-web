@@ -4,12 +4,12 @@ import { localImage } from "@/lib/images";
 
 // Photo cards, used once the matching files exist in /public/images.
 const photoScenes = [
-  { file: "residence", label: "Modern Residences" },
-  { file: "nexora-gate", label: "Secure Gate Access" },
-  { file: "community", label: "Community Living" },
-  { file: "nexora-admin", label: "Society Management" },
-  { file: "amenities", label: "Shared Amenities" },
-  { file: "nexora-living", label: "Connected Living" },
+  { file: "township-aerial", label: "Township Living" },
+  { file: "lobby", label: "Welcoming Lobbies" },
+  { file: "playground", label: "Safe Play Areas" },
+  { file: "gym", label: "Shared Amenities" },
+  { file: "parking", label: "Parking & Vehicles" },
+  { file: "control-room", label: "Security Control" },
 ];
 
 // Illustrated fallback tiles, used until real photos are added.

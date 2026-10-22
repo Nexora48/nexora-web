@@ -5,7 +5,7 @@ import { localImage } from "@/lib/images";
 import { contactPage } from "@/content/contact";
 
 export default function ContactHero() {
-  const photo = localImage("amenities");
+  const photo = localImage("lobby");
   const { hero } = contactPage;
 
   return (

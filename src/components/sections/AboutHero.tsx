@@ -5,7 +5,7 @@ import { localImage } from "@/lib/images";
 import { aboutPage } from "@/content/about";
 
 export default function AboutHero() {
-  const photo = localImage("residence");
+  const photo = localImage("township-aerial");
   const { hero } = aboutPage;
 
   return (

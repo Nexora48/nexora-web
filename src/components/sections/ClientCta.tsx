@@ -10,7 +10,7 @@ import { clientCta } from "@/content/cta";
 import { products } from "@/content/products";
 
 export default function ClientCta() {
-  const photo = localImage("residence");
+  const photo = localImage("balcony-night");
 
   return (
     <section className="py-16 sm:py-24">

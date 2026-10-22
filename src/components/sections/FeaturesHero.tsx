@@ -6,7 +6,7 @@ import { features, featuresIntro } from "@/content/features";
 import { products } from "@/content/products";
 
 export default function FeaturesHero() {
-  const photo = localImage("nexora-living");
+  const photo = localImage("gate-delivery");
   const chips = [`${features.length} features`, `${products.length} connected apps`, "One platform"];
 
   return (

@@ -16,7 +16,7 @@ const socialPlatforms: Array<{ key: keyof typeof contactDetails.social; icon: st
 
 // Home-page contact block: one split panel — photo/details on the left, form on the right.
 export default function ContactSection() {
-  const photo = localImage("amenities");
+  const photo = localImage("committee-meeting");
   const details = [
     { icon: Mail, label: "Email", value: contactDetails.email, href: `mailto:${contactDetails.email}` },
     { icon: Phone, label: "Phone", value: contactDetails.phone, href: `tel:${contactDetails.phone.replace(/\s+/g, "")}` },

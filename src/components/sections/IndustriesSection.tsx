@@ -6,7 +6,7 @@ import { localImage } from "@/lib/images";
 import { industries, industriesIntro } from "@/content/industries";
 
 export default function IndustriesSection() {
-  const photo = localImage("residence");
+  const photo = localImage("twilight-community");
 
   return (
     <section id="industries" className="relative overflow-hidden bg-ink py-16 text-white sm:py-24">

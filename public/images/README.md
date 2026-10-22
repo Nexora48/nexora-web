@@ -15,3 +15,21 @@ Any slot without a file falls back to the built-in illustrated design.
 | `amenities` | About strip | 1200px wide | https://unsplash.com/s/photos/apartment-swimming-pool |
 
 Unsplash photos are free to use without attribution. The About strip switches to photos once at least 3 of its files exist.
+
+## Where each photo is used
+
+| File | Used in |
+|---|---|
+| `hero` | Products hero, Vision & Mission background |
+| `residence` | Home hero tile |
+| `nexora-admin`, `nexora-living`, `nexora-gate` | Product cards, product pages, Products showcase |
+| `community` | About story, Leadership hero fallback |
+| `township-aerial` | About page hero, About strip |
+| `lobby` | Contact page hero, About strip |
+| `playground`, `gym`, `parking`, `control-room` | About strip |
+| `twilight-community` | Home "Who We Build For" band |
+| `balcony-night` | Call-to-action card |
+| `committee-meeting` | Home contact panel |
+| `gate-delivery` | Features page hero |
+| `team-workspace`, `team-planning`, `team-product` | Leadership hero and principles |
+| `amenities` | spare (not currently used) |
