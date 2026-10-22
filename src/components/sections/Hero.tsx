@@ -12,13 +12,10 @@ import { products } from "@/content/products";
 
 type HeroProps = { backgroundSrc?: string | null; visualSrc?: string | null };
 
-const ACCENT_PHRASE = "Digital Products";
-
 export default function Hero({ backgroundSrc = null, visualSrc = null }: HeroProps) {
   const reduce = useReducedMotion();
-  const [before, after] = hero.headline.includes(ACCENT_PHRASE)
-    ? hero.headline.split(ACCENT_PHRASE)
-    : [hero.headline, null];
+  const accent: string = hero.accent;
+  const [before, after] = accent && hero.headline.includes(accent) ? hero.headline.split(accent) : [hero.headline, null];
 
   const float = (delay: number, distance = 10) =>
     reduce
@@ -72,7 +69,7 @@ export default function Hero({ backgroundSrc = null, visualSrc = null }: HeroPro
             {before}
             {after !== null ? (
               <span className="bg-gradient-to-r from-brand-light to-accent bg-clip-text text-transparent">
-                {ACCENT_PHRASE}
+                {accent}
               </span>
             ) : null}
             {after}
