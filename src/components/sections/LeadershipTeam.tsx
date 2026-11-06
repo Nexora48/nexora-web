@@ -98,7 +98,11 @@ export default function LeadershipTeam({ showHeading = false, id }: { showHeadin
                       <span className="inline-block rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] font-medium uppercase tracking-wider backdrop-blur">
                         {leader.role}
                       </span>
-                      <h3 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">{leader.name}</h3>
+                      {showHeading ? (
+                        <h3 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">{leader.name}</h3>
+                      ) : (
+                        <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">{leader.name}</h2>
+                      )}
                       <p className="mt-3 max-w-md text-sm leading-relaxed text-white/80">{leader.bio}</p>
                       {links.length > 0 ? (
                         <div className="mt-5 flex gap-2">

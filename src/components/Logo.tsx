@@ -10,7 +10,7 @@ export default function Logo({ className, mark = "auto" }: { className?: string;
   const textClass = mark === "light" ? "text-white" : "text-foreground";
 
   return (
-    <Link href="/" className={cn("group flex items-center gap-2.5", className)} aria-label="Nexora Pvt — Home">
+    <Link href="/" className={cn("group flex min-h-11 items-center gap-2.5", className)} aria-label="Nexora Pvt — Home">
       <span
         className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-solid to-brand-light shadow-glow transition-transform duration-300 group-hover:scale-105"
         aria-hidden="true"

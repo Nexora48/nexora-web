@@ -86,9 +86,7 @@ export default function ContactForm() {
         <CheckCircle2 className="h-12 w-12 text-emerald-500" aria-hidden="true" />
         <h3 className="mt-4 font-display text-xl font-semibold">Thanks — your inquiry is in.</h3>
         <p className="mt-2 max-w-sm text-sm text-muted">
-          This is a demo submission (no data was sent anywhere). Once connected to a real backend, our team would
-          reply within one business day.
-        </p>
+          This is a demo submission, so nothing was sent yet. Once the form is connected, our team will get back to you.</p>
         <button
           type="button"
           onClick={() => setStatus("idle")}

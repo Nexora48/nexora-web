@@ -50,12 +50,12 @@ export default function Footer() {
           {linkColumns.map((column) => (
             <div key={column.title}>
               <h3 className="text-xs font-semibold uppercase tracking-wider text-white">{column.title}</h3>
-              <ul className="mt-5 space-y-3">
+              <ul className="mt-4 space-y-0.5">
                 {column.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="group inline-flex items-center text-sm text-white/60 transition-colors hover:text-white"
+                      className="group inline-flex min-h-11 items-center text-sm text-white/60 transition-colors hover:text-white"
                     >
                       <span className="h-px w-0 bg-brand-light transition-all duration-300 group-hover:mr-2 group-hover:w-3" aria-hidden="true" />
                       {link.label}
@@ -76,7 +76,7 @@ export default function Footer() {
 
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             {legal?.links.map((link) => (
-              <Link key={link.label} href={link.href} className="text-xs text-white/50 transition-colors hover:text-white">
+              <Link key={link.label} href={link.href} className="inline-flex min-h-11 items-center text-xs text-white/50 transition-colors hover:text-white">
                 {link.label}
               </Link>
             ))}
