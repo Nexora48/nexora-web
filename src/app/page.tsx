@@ -1,6 +1,7 @@
 import { localImage } from "@/lib/images";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
+import StatsStrip from "@/components/StatsStrip";
 import ProductsSection from "@/components/sections/ProductsSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import WhyNexora from "@/components/sections/WhyNexora";
@@ -16,6 +17,7 @@ export default function Home() {
     <>
       <Hero photoSrc={localImage("residence")} />
       <About />
+      <StatsStrip />
       <ProductsSection />
       <FeaturesSection />
       <WhyNexora />

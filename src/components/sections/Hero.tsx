@@ -7,6 +7,7 @@ import { ArrowRight, Check, ChevronRight, X } from "lucide-react";
 import Container from "@/components/Container";
 import Button from "@/components/Button";
 import Icon from "@/components/Icon";
+import Magnetic from "@/components/Magnetic";
 import { hero } from "@/content/hero";
 import { company } from "@/content/company";
 import { products } from "@/content/products";
@@ -137,10 +138,12 @@ export default function Hero({ photoSrc = null }: { photoSrc?: string | null }) 
           </motion.p>
 
           <motion.div {...rise(0.3)} className="mt-9 flex flex-wrap gap-3">
-            <Button href={hero.primaryCta.href}>
-              {hero.primaryCta.label}
-              <ArrowRight className="h-4 w-4" />
-            </Button>
+            <Magnetic>
+              <Button href={hero.primaryCta.href}>
+                {hero.primaryCta.label}
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Magnetic>
             <Button href={hero.secondaryCta.href} variant="secondary">
               {hero.secondaryCta.label}
             </Button>
