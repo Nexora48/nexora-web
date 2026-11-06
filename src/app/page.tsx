@@ -3,6 +3,7 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import StatsStrip from "@/components/StatsStrip";
 import ProductsSection from "@/components/sections/ProductsSection";
+import BigMarquee from "@/components/BigMarquee";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import WhyNexora from "@/components/sections/WhyNexora";
 import IndustriesSection from "@/components/sections/IndustriesSection";
@@ -19,6 +20,7 @@ export default function Home() {
       <About />
       <StatsStrip />
       <ProductsSection />
+      <BigMarquee />
       <FeaturesSection />
       <WhyNexora />
       <IndustriesSection />

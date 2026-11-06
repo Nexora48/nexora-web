@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type PointerEvent, type ReactNode } from "react";
 import Image from "next/image";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Check, ChevronRight, X } from "lucide-react";
 import Container from "@/components/Container";
 import Button from "@/components/Button";
@@ -56,6 +56,10 @@ export default function Hero({ photoSrc = null }: { photoSrc?: string | null }) 
   const reduce = useReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
   const [n, setN] = useState(0);
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] });
+  const leftY = useTransform(scrollYProgress, [0, 1], [0, -90]);
+  const leftOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
+  const rightY = useTransform(scrollYProgress, [0, 1], [0, 70]);
 
   const accent: string = hero.accent;
   const [before, after] =
@@ -110,7 +114,7 @@ export default function Hero({ photoSrc = null }: { photoSrc?: string | null }) 
       </div>
 
       <Container className="relative grid min-h-[90vh] items-center gap-14 pb-20 pt-36 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">
-        <div>
+        <motion.div style={reduce ? undefined : { y: leftY, opacity: leftOpacity }}>
           <motion.span
             {...rise(0)}
             className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-4 py-1.5 text-xs font-medium tracking-wide text-muted shadow-soft backdrop-blur"
@@ -159,10 +163,10 @@ export default function Hero({ photoSrc = null }: { photoSrc?: string | null }) 
               </li>
             ))}
           </motion.ul>
-        </div>
+        </motion.div>
 
         {/* Bento product preview — illustrative UI, no real data */}
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-6" aria-hidden="true">
+        <motion.div style={reduce ? undefined : { y: rightY }} className="grid grid-cols-2 gap-4 md:grid-cols-6" aria-hidden="true">
           {/* Photo */}
           <Tile delay={0.2} className="col-span-2 min-h-44 md:col-span-4">
             <div className="absolute inset-0 bg-gradient-to-br from-brand/25 via-surface-alt to-brand-light/20" />
@@ -285,7 +289,7 @@ export default function Hero({ photoSrc = null }: { photoSrc?: string | null }) 
               </motion.div>
             </AnimatePresence>
           </Tile>
-        </div>
+        </motion.div>
       </Container>
 
       {/* Feature ticker */}

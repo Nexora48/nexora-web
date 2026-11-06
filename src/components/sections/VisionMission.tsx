@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Eye, Target } from "lucide-react";
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
+import ScrubText from "@/components/ScrubText";
 import { localImage } from "@/lib/images";
 import { company } from "@/content/company";
 
@@ -42,7 +43,7 @@ export default function VisionMission() {
                   <ItemIcon className="h-6 w-6" aria-hidden="true" />
                 </span>
                 <h3 className="mt-6 text-xs font-medium uppercase tracking-wider text-accent">{label}</h3>
-                <p className="mt-3 text-balance font-display text-2xl font-medium leading-snug sm:text-3xl">{text}</p>
+                <ScrubText text={text} className="mt-3 text-balance font-display text-2xl font-medium leading-snug sm:text-3xl" />
               </div>
             </Reveal>
           ))}

@@ -1,6 +1,7 @@
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
 import ImageMarquee from "@/components/ImageMarquee";
+import ScrubText from "@/components/ScrubText";
 import { about } from "@/content/about";
 
 export default function About() {
@@ -14,7 +15,7 @@ export default function About() {
           <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl">
             {about.heading}
           </h2>
-          <p className="mt-6 text-lg text-muted text-balance">{about.body}</p>
+          <ScrubText text={about.body} className="mt-6 text-lg text-foreground text-balance" />
         </Reveal>
       </Container>
 

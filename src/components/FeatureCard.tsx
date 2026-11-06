@@ -1,5 +1,6 @@
 import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
+import Spotlight from "@/components/Spotlight";
 import { products } from "@/content/products";
 import type { Feature } from "@/content/features";
 
@@ -13,6 +14,7 @@ export default function FeatureCard({ feature, delay = 0 }: { feature: Feature; 
         className="group relative flex h-full scroll-mt-28 flex-col overflow-hidden rounded-card border border-border bg-surface p-7 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-lifted"
       >
         <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-brand-solid/10 blur-2xl" />
+        <Spotlight />
         <span className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-solid to-brand-light text-white shadow-glow">
           <Icon name={feature.icon} className="h-7 w-7" />
         </span>
