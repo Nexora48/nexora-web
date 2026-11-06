@@ -61,8 +61,8 @@
   --color-accent: var(--accent);
   --color-accent-dark: var(--accent-dark);
 
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-manrope);
 
   --radius-card: 1.25rem;
   --radius-pill: 999px;
