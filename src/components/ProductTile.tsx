@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import Tilt from "@/components/Tilt";
 import Icon from "@/components/Icon";
 import { localImage } from "@/lib/images";
 import type { Product } from "@/content/products";
@@ -11,6 +12,7 @@ export default function ProductTile({ product, delay = 0 }: { product: Product; 
 
   return (
     <Reveal delay={delay} className="h-full">
+      <Tilt className="h-full">
       <Link
         href={`/products/${product.slug}`}
         className="group relative flex h-full min-h-[30rem] flex-col justify-between overflow-hidden rounded-card border border-border bg-gradient-to-br from-brand/25 via-surface-alt to-brand-light/20 p-6 text-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-lifted"
@@ -54,6 +56,7 @@ export default function ProductTile({ product, delay = 0 }: { product: Product; 
           </ul>
         </div>
       </Link>
+      </Tilt>
     </Reveal>
   );
 }

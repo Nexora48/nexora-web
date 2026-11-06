@@ -9,7 +9,7 @@ export default function AboutHero() {
   const { hero } = aboutPage;
 
   return (
-    <section className="relative overflow-hidden bg-ink py-24 text-white sm:py-32">
+    <section className="grain relative overflow-hidden bg-ink py-24 text-white sm:py-32">
       {photo ? (
         <>
           <Image src={photo} alt="" fill priority quality={80} sizes="100vw" className="object-cover" />

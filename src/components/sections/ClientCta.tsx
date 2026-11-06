@@ -16,7 +16,7 @@ export default function ClientCta() {
     <section className="py-16 sm:py-24">
       <Container>
         <Reveal>
-          <div className="relative overflow-hidden rounded-[2rem] bg-ink p-8 text-white shadow-lifted sm:p-12 lg:p-16">
+          <div className="grain relative overflow-hidden rounded-[2rem] bg-ink p-8 text-white shadow-lifted sm:p-12 lg:p-16">
             {photo ? (
               <>
                 <Image src={photo} alt="" fill quality={75} sizes="(min-width: 1280px) 1200px, 100vw" className="object-cover" />

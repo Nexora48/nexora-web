@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Parallax from "@/components/Parallax";
 import { CheckCircle2, Layers } from "lucide-react";
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
@@ -38,7 +39,8 @@ export default function AboutStory() {
           <Reveal delay={0.1} className="relative">
             <div className="relative aspect-[4/3] overflow-hidden rounded-card border border-border bg-gradient-to-br from-brand/20 via-surface-alt to-brand-light/15 shadow-lifted">
               {photo ? (
-                <Image
+                <Parallax>
+                  <Image
                   src={photo}
                   alt="Residents enjoying a green community park"
                   fill
@@ -46,6 +48,7 @@ export default function AboutStory() {
                   sizes="(min-width: 1024px) 560px, 100vw"
                   className="object-cover"
                 />
+                </Parallax>
               ) : null}
             </div>
             <div className="absolute -bottom-5 left-4 flex items-center gap-3 rounded-2xl border border-border bg-background/95 px-4 py-3 shadow-lifted backdrop-blur sm:left-8">

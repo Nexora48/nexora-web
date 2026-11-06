@@ -11,7 +11,7 @@ export default function ProductsTogether() {
   const chain = order.map((slug) => products.find((p) => p.slug === slug)!).filter(Boolean);
 
   return (
-    <section className="relative overflow-hidden bg-ink py-16 text-white sm:py-24">
+    <section className="grain relative overflow-hidden bg-ink py-16 text-white sm:py-24">
       <div className="pointer-events-none absolute -right-20 top-0 h-[320px] w-[320px] rounded-full bg-brand-solid/40 blur-[120px]" />
       <div className="pointer-events-none absolute -left-20 bottom-0 h-[260px] w-[260px] rounded-full bg-accent/12 blur-[110px]" />
       <Container className="relative text-center">

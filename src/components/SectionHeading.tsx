@@ -1,4 +1,5 @@
 import Reveal from "@/components/Reveal";
+import SplitHeading from "@/components/SplitHeading";
 import { cn } from "@/lib/utils";
 
 export default function SectionHeading({
@@ -27,9 +28,7 @@ export default function SectionHeading({
           {eyebrow}
         </span>
       ) : null}
-      <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl">
-        {heading}
-      </h2>
+      <SplitHeading text={heading} className="mt-4 font-display text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl" />
       {subheading ? (
         <p className="mt-4 text-lg text-muted text-balance">{subheading}</p>
       ) : null}

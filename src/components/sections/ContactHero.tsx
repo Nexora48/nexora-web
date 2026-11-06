@@ -9,7 +9,7 @@ export default function ContactHero() {
   const { hero } = contactPage;
 
   return (
-    <section className="relative overflow-hidden bg-ink pb-40 pt-32 text-white sm:pb-44 sm:pt-36">
+    <section className="grain relative overflow-hidden bg-ink pb-40 pt-32 text-white sm:pb-44 sm:pt-36">
       {photo ? (
         <>
           <Image src={photo} alt="" fill priority quality={80} sizes="100vw" className="object-cover" />

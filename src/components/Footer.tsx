@@ -14,7 +14,7 @@ export default function Footer() {
   const legal = footerColumns.find((c) => c.title === "Legal");
 
   return (
-    <footer className="relative overflow-hidden bg-ink text-white/70">
+    <footer className="grain relative overflow-hidden bg-ink text-white/70">
       <div
         className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-light/60 to-transparent"
         aria-hidden="true"

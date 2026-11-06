@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Parallax from "@/components/Parallax";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
@@ -25,7 +26,8 @@ export default function ProductShowcase() {
                 <Reveal className={cn("relative", flip && "lg:order-2")}>
                   <div className="relative aspect-[4/3] overflow-hidden rounded-card border border-border bg-gradient-to-br from-brand/20 via-surface-alt to-brand-light/15 shadow-lifted">
                     {photo ? (
-                      <Image
+                      <Parallax>
+                        <Image
                         src={photo}
                         alt={`${product.name} — ${product.category}`}
                         fill
@@ -33,6 +35,7 @@ export default function ProductShowcase() {
                         sizes="(min-width: 1024px) 560px, 100vw"
                         className="object-cover"
                       />
+                      </Parallax>
                     ) : null}
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/35 to-transparent" aria-hidden="true" />
                   </div>

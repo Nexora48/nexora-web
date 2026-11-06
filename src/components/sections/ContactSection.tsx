@@ -28,7 +28,7 @@ export default function ContactSection() {
       <Container>
         <Reveal>
           <div className="grid overflow-hidden rounded-[2rem] border border-border bg-background shadow-lifted lg:grid-cols-5">
-            <div className="relative overflow-hidden bg-ink p-8 text-white sm:p-12 lg:col-span-2">
+            <div className="grain relative overflow-hidden bg-ink p-8 text-white sm:p-12 lg:col-span-2">
               {photo ? (
                 <>
                   <Image src={photo} alt="" fill quality={75} sizes="(min-width: 1024px) 480px, 100vw" className="object-cover" />

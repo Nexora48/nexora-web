@@ -13,7 +13,7 @@ export default function VisionMission() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-ink py-16 text-white sm:py-24">
+    <section className="grain relative overflow-hidden bg-ink py-16 text-white sm:py-24">
       {photo ? (
         <>
           <Image src={photo} alt="" fill quality={75} sizes="100vw" className="object-cover" />
