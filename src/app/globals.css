@@ -177,3 +177,17 @@ html.lenis body {
 .animate-marquee-reverse {
   animation: marquee 60s linear infinite reverse;
 }
+
+/* Pro UI: every interactive element signals it is clickable */
+a,
+button,
+[role="button"],
+[role="tab"],
+label[for],
+select,
+summary {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}

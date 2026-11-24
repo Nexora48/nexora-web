@@ -43,6 +43,14 @@ export default function LeadershipTeam({ showHeading = false, id }: { showHeadin
                   onMouseEnter={() => setActive(i)}
                   onFocus={() => setActive(i)}
                   onClick={() => setActive(i)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      setActive(i);
+                    }
+                  }}
+                  role="button"
+                  aria-expanded={open}
                   className={cn(
                     "group relative min-h-[22rem] cursor-pointer overflow-hidden rounded-[1.75rem] border border-white/10 bg-gradient-to-br text-white shadow-soft outline-none transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:ring-2 focus-visible:ring-brand-light md:min-h-0",
                     covers[i % covers.length],
