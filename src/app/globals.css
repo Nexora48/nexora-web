@@ -7,35 +7,35 @@
 /* ------------------------------------------------------------------ */
 :root {
   /* Light: clean white, cool slate neutrals */
-  --background: #ffffff;
-  --surface: #f4f7f9;
-  --surface-alt: #e6edf2;
-  --foreground: #0b1220;
-  --muted: #4b5b6b;
-  --border: #d9e2ea;
+  --background: #fafaf9;
+  --surface: #f5f5f4;
+  --surface-alt: #e7e5e4;
+  --foreground: #1c1917;
+  --muted: #57534e;
+  --border: #e7e5e4;
 
-  --brand: #047857; /* text/icon accents on light (5.5:1) */
+  --brand: #047857; /* emerald: text/icon accents on light (5.2:1) */
   --brand-light: #10b981;
   --brand-dark: #065f46;
   --brand-solid: #047857; /* filled buttons, white text 5.5:1 */
   --brand-solid-dark: #065f46;
   --accent: #8a6a2b; /* champagne, small accents on light */
   --accent-dark: #6b5320;
-  --ink: #0b1220; /* midnight: dark bands, hero, footer */
+  --ink: #1c1917; /* graphite: dark bands, hero, footer */
 
-  --shadow-color: 215 50% 10%;
+  --shadow-color: 24 10% 10%;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #070d18;
-    --surface: #0e1726;
-    --surface-alt: #15223a;
-    --foreground: #eef3f8;
-    --muted: #9aa7b8;
-    --border: #1c2a3e;
+    --background: #0c0a09;
+    --surface: #1c1917;
+    --surface-alt: #292524;
+    --foreground: #fafaf9;
+    --muted: #a8a29e;
+    --border: #292524;
 
-    --brand: #34d399; /* emerald on dark (9.7:1) */
+    --brand: #34d399; /* emerald on dark (10:1) */
     --brand-light: #6ee7b7;
     --brand-dark: #10b981;
     --accent: #e7c98a; /* champagne on dark */
