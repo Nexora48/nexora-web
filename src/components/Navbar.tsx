@@ -47,7 +47,7 @@ export default function Navbar() {
   return (
     // Fixed-height wrapper pulled over the page top so heroes slide under the floating bar.
     <header className="sticky top-0 z-50 -mb-[76px] h-[76px] px-3 pt-3 sm:px-6">
-      <div className={cn("relative mx-auto max-w-7xl", !scrolled && "theme-dark")}>
+      <div className="relative mx-auto max-w-7xl">
         <div
           className={cn(
             "flex items-center justify-between rounded-full border pl-4 pr-2 backdrop-blur-xl transition-all duration-300 sm:pl-5",
