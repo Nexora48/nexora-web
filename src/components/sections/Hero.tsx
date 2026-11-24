@@ -93,7 +93,7 @@ export default function Hero({ photoSrc = null }: { photoSrc?: string | null }) 
     <section
       ref={sectionRef}
       onPointerMove={onPointerMove}
-      className="relative overflow-hidden bg-background"
+      className="theme-dark relative overflow-hidden bg-background"
       style={{ ["--mx" as string]: "70%", ["--my" as string]: "30%" }}
     >
       {/* Soft mesh background */}

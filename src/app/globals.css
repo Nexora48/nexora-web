@@ -190,3 +190,18 @@ summary {
 button:disabled {
   cursor: not-allowed;
 }
+
+/* Always-dark colour set for dark showcase sections (hero), regardless of
+   the visitor's system light/dark setting. Descendants inherit it. */
+.theme-dark {
+  --background: #0c0a09;
+  --surface: #1c1917;
+  --surface-alt: #292524;
+  --foreground: #fafaf9;
+  --muted: #a8a29e;
+  --border: #292524;
+  --brand: #34d399;
+  --brand-light: #6ee7b7;
+  --accent: #e7c98a;
+  color: var(--foreground);
+}
