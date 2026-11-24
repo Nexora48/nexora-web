@@ -3,6 +3,7 @@ import Parallax from "@/components/Parallax";
 import { CheckCircle2, Layers } from "lucide-react";
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
+import Tilt from "@/components/Tilt";
 import { localImage } from "@/lib/images";
 import { aboutPage } from "@/content/about";
 
@@ -37,7 +38,8 @@ export default function AboutStory() {
           </Reveal>
 
           <Reveal delay={0.1} className="relative">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-card border border-border bg-gradient-to-br from-brand/20 via-surface-alt to-brand-light/15 shadow-lifted">
+            <Tilt max={6}>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-card border border-border bg-gradient-to-br from-brand/20 via-surface-alt to-brand-light/15 shadow-lifted">
               {photo ? (
                 <Parallax>
                   <Image
@@ -51,6 +53,7 @@ export default function AboutStory() {
                 </Parallax>
               ) : null}
             </div>
+            </Tilt>
             <div className="absolute -bottom-5 left-4 flex items-center gap-3 rounded-2xl border border-border bg-background/95 px-4 py-3 shadow-lifted backdrop-blur sm:left-8">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-solid text-white">
                 <Layers className="h-5 w-5" aria-hidden="true" />

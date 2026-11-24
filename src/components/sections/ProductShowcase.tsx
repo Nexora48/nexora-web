@@ -3,6 +3,7 @@ import Parallax from "@/components/Parallax";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
+import Tilt from "@/components/Tilt";
 import Button from "@/components/Button";
 import Icon from "@/components/Icon";
 import { localImage } from "@/lib/images";
@@ -24,7 +25,8 @@ export default function ProductShowcase() {
             <Container>
               <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
                 <Reveal className={cn("relative", flip && "lg:order-2")}>
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-card border border-border bg-gradient-to-br from-brand/20 via-surface-alt to-brand-light/15 shadow-lifted">
+                  <Tilt max={6}>
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-card border border-border bg-gradient-to-br from-brand/20 via-surface-alt to-brand-light/15 shadow-lifted">
                     {photo ? (
                       <Parallax>
                         <Image
@@ -39,6 +41,7 @@ export default function ProductShowcase() {
                     ) : null}
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/35 to-transparent" aria-hidden="true" />
                   </div>
+                  </Tilt>
                   <span className="absolute -bottom-5 left-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-solid to-brand-light text-white shadow-glow ring-4 ring-background">
                     <Icon name={product.icon} className="h-7 w-7" />
                   </span>

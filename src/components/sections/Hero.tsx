@@ -8,6 +8,7 @@ import Container from "@/components/Container";
 import Button from "@/components/Button";
 import Icon from "@/components/Icon";
 import Magnetic from "@/components/Magnetic";
+import Tilt from "@/components/Tilt";
 import { hero } from "@/content/hero";
 import { company } from "@/content/company";
 import { products } from "@/content/products";
@@ -47,7 +48,9 @@ function Tile({ className, children, delay = 0 }: { className?: string; children
         className
       )}
     >
-      {children}
+      <Tilt className="h-full" max={5}>
+        {children}
+      </Tilt>
     </motion.div>
   );
 }
