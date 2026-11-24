@@ -20,9 +20,9 @@
   --brand-dark: #115e59;
   --brand-solid: #0f766e; /* filled buttons (white text, AA contrast) */
   --brand-solid-dark: #115e59;
-  --accent: #f59e0b;
-  --accent-dark: #b45309;
-  --ink: #0a1626; /* always-dark navy bands: hero, footer, CTA */
+  --accent: #a16207; /* warm gold, small accents on light */
+  --accent-dark: #854d0e;
+  --ink: #0f172a; /* always-dark navy bands: hero, footer, CTA */
 
   --shadow-color: 215 45% 12%;
 }
@@ -39,8 +39,8 @@
     --brand: #2dd4bf; /* lighter teal for text on dark */
     --brand-light: #5eead4;
     --brand-dark: #14b8a6;
-    --accent: #fbbf24;
-    --accent-dark: #d97706;
+    --accent: #f5c56b; /* warm gold on dark */
+    --accent-dark: #d4a24c;
   }
 }
 
@@ -127,7 +127,7 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(100deg, var(--color-brand) 10%, var(--color-accent) 90%);
+  background: linear-gradient(100deg, var(--color-brand) 10%, var(--color-brand-light) 90%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

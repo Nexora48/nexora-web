@@ -24,7 +24,7 @@ export default function StatsStrip() {
             {stats.map((s) => (
               <div key={s.label} className="bg-surface p-6 text-center sm:p-8">
                 <dt className="order-2 mt-2 text-sm text-muted">{s.label}</dt>
-                <dd className="bg-gradient-to-br from-brand to-accent bg-clip-text font-display text-5xl font-bold text-transparent sm:text-6xl">
+                <dd className="bg-gradient-to-br from-brand to-brand-light bg-clip-text font-display text-5xl font-bold text-transparent sm:text-6xl">
                   <CountUp to={s.value} />
                 </dd>
               </div>

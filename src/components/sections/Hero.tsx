@@ -132,7 +132,7 @@ export default function Hero({ photoSrc = null }: { photoSrc?: string | null }) 
           >
             {before}
             {after !== null ? (
-              <span className="bg-gradient-to-r from-brand to-accent bg-clip-text text-transparent">{accent}</span>
+              <span className="bg-gradient-to-r from-brand to-brand-light bg-clip-text text-transparent">{accent}</span>
             ) : null}
             {after}
           </motion.h1>

@@ -27,8 +27,8 @@ const iconScenes = [
 const gradients = [
   "from-brand/25 via-surface-alt to-brand-light/15",
   "from-brand-light/25 via-surface-alt to-brand/15",
-  "from-brand/20 via-surface-alt to-accent/10",
-  "from-brand-light/15 via-surface-alt to-accent/15",
+  "from-brand/20 via-surface-alt to-brand-light/10",
+  "from-brand-light/15 via-surface-alt to-brand-light/15",
 ];
 
 type Card = { key: string; label: string; src: string | null; icon?: string; gradient: string };
