@@ -16,7 +16,7 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 72,
-          background: "linear-gradient(135deg, #0a1626 0%, #115e59 100%)",
+          background: "linear-gradient(135deg, #0b1220 0%, #065f46 100%)",
           color: "white",
           fontFamily: "sans-serif",
         }}
@@ -27,7 +27,7 @@ export default function OpenGraphImage() {
               width: 64,
               height: 64,
               borderRadius: 18,
-              background: "linear-gradient(135deg, #0f766e, #5eead4)",
+              background: "linear-gradient(135deg, #047857, #6ee7b7)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -43,7 +43,7 @@ export default function OpenGraphImage() {
           <div style={{ fontSize: 76, fontWeight: 700, lineHeight: 1.05, maxWidth: 980 }}>
             Smarter Living for Every Community.
           </div>
-          <div style={{ fontSize: 32, color: "#99f6e4" }}>Nexora Admin · Nexora Living · Nexora Gate</div>
+          <div style={{ fontSize: 32, color: "#a7f3d0" }}>Nexora Admin · Nexora Living · Nexora Gate</div>
         </div>
       </div>
     ),

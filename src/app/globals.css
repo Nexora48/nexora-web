@@ -8,38 +8,37 @@
 :root {
   /* Light: clean white, cool slate neutrals */
   --background: #ffffff;
-  --surface: #f5f8fa;
-  --surface-alt: #e9eff4;
-  --foreground: #0b1b2b;
-  --muted: #4f5f70;
-  --border: #dce4eb;
+  --surface: #f4f7f9;
+  --surface-alt: #e6edf2;
+  --foreground: #0b1220;
+  --muted: #4b5b6b;
+  --border: #d9e2ea;
 
-  /* Brand: deep teal. Accent: warm amber, used sparingly. */
-  --brand: #0f766e; /* text/icon accents on light surfaces */
-  --brand-light: #14b8a6;
-  --brand-dark: #115e59;
-  --brand-solid: #0f766e; /* filled buttons (white text, AA contrast) */
-  --brand-solid-dark: #115e59;
-  --accent: #a16207; /* warm gold, small accents on light */
-  --accent-dark: #854d0e;
-  --ink: #0f172a; /* always-dark navy bands: hero, footer, CTA */
+  --brand: #047857; /* text/icon accents on light (5.5:1) */
+  --brand-light: #10b981;
+  --brand-dark: #065f46;
+  --brand-solid: #047857; /* filled buttons, white text 5.5:1 */
+  --brand-solid-dark: #065f46;
+  --accent: #8a6a2b; /* champagne, small accents on light */
+  --accent-dark: #6b5320;
+  --ink: #0b1220; /* midnight: dark bands, hero, footer */
 
-  --shadow-color: 215 45% 12%;
+  --shadow-color: 215 50% 10%;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #09111d;
-    --surface: #0f1a2b;
-    --surface-alt: #152238;
+    --background: #070d18;
+    --surface: #0e1726;
+    --surface-alt: #15223a;
     --foreground: #eef3f8;
-    --muted: #92a2b5;
-    --border: #1e2d45;
+    --muted: #9aa7b8;
+    --border: #1c2a3e;
 
-    --brand: #2dd4bf; /* lighter teal for text on dark */
-    --brand-light: #5eead4;
-    --brand-dark: #14b8a6;
-    --accent: #f5c56b; /* warm gold on dark */
+    --brand: #34d399; /* emerald on dark (9.7:1) */
+    --brand-light: #6ee7b7;
+    --brand-dark: #10b981;
+    --accent: #e7c98a; /* champagne on dark */
     --accent-dark: #d4a24c;
   }
 }
